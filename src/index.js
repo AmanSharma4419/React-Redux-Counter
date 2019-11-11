@@ -1,5 +1,4 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import  "./App"
-
-ReactDOM.render(<App />, document.getElementById('root'));
+import Counter from "./Components/ReduxCounter/Counter"
+ReactDOM.render(<Counter />, document.getElementById('root'));
