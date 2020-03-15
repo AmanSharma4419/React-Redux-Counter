@@ -8,8 +8,13 @@ function Hoc(Hello) {
         initialValue: "Hello Aman"
       };
     }
+    stateChanger = () => {
+      this.setState({ ...this.state, initialValue: "hello Sharma" });
+    };
     render() {
-      return <Hello name={this.state.initialValue} />;
+      return (
+        <Hello name={this.state.initialValue} method={this.stateChanger} />
+      );
     }
   }
   return childOfHoc;

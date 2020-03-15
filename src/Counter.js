@@ -32,6 +32,7 @@ class Counter extends React.Component {
   increment = () => {
     store.dispatch({ type: "Increment" });
     console.log(this.props.name);
+    this.props.method()
   };
   decrement = () => {
     store.dispatch({ type: "Decrement" });
@@ -44,13 +45,13 @@ class Counter extends React.Component {
       <React.Fragment>
         <h1 style={Style}>{this.state.count}</h1>
         <div className="card" style={{ width: "15rem" }}>
-          <button onClick={this.increment} class="btn btn-primary">
+          <button onClick={this.increment} className="btn btn-primary">
             Increment
           </button>
-          <button onClick={this.decrement} class="btn btn-secondary">
+          <button onClick={this.decrement} className="btn btn-secondary">
             Decrement
           </button>
-          <button onClick={this.Reset} class="btn btn-success">
+          <button onClick={this.Reset} className="btn btn-success">
             Reset
           </button>
         </div>
